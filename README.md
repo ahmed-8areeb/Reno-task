@@ -6,7 +6,11 @@ Welcome to the Reno Dashboard project! This README will guide you through settin
 
 This video is show the project features.
 
-![Demo Video](https://drive.google.com/uc?export=download&id=1br5Ba5O_g_yUpNBbH1cfORngjRBRCcZj)
+
+
+https://github.com/ahmed-8areeb/Reno-task/assets/62256670/83efd09d-9aa7-4d0e-8ba9-509c0585971b
+
+
 
 ## Getting Started
 

@@ -6,7 +6,7 @@ Welcome to the Reno Dashboard project! This README will guide you through settin
 
 This video is show the project features.
 
-![Demo Video](https://drive.google.com/file/d/1br5Ba5O_g_yUpNBbH1cfORngjRBRCcZj/view?usp=sharing)
+![Demo Video](https://drive.google.com/uc?export=download&id=1br5Ba5O_g_yUpNBbH1cfORngjRBRCcZj)
 
 ## Getting Started
 

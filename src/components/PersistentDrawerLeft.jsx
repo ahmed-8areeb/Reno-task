@@ -136,6 +136,7 @@ export default function PersistentDrawerLeft() {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
+            overflowX: 'hidden',
           },
         }}
         variant="persistent"
@@ -144,7 +145,7 @@ export default function PersistentDrawerLeft() {
         PaperProps={{ sx: { backgroundColor: '#050E2D' } }}
       >
         <DrawerHeader sx={{ backgroundColor: '#050E2D', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5px' }}>
-          <img src='../../public/renoLogo.png' alt="logo" style={{ width: '100px', height: '100px', marginBottom: '8px' }} />
+          <img src='../../public/renoLogo.png' alt="logo" style={{ width: '100px', height: '100px', marginBottom: '8px', objectFit: 'scale-down' }} />
           <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', backgroundColor: '#FFFFF', borderRadius: '15px', padding: '4px 4px 4px 4px' }}>
             <TextField
               label="Quick Access"
@@ -197,7 +198,7 @@ export default function PersistentDrawerLeft() {
               >
                 {accordion.label}
               </AccordionSummary>
-              <AccordionDetails key={accordion.id} sx={{ backgroundColor: '#050E2D', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <AccordionDetails key={accordion.id} sx={{ backgroundColor: '#050E2D', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 0 }}>
                 {accordion.buttons.map((button, index) => (
                   <NavLink key={index} to={`/${accordion.id}/${button.toLowerCase().replace(' ', '')}`} style={{ textDecoration: 'none', width: '100%' }}>
                     <Button
@@ -205,12 +206,15 @@ export default function PersistentDrawerLeft() {
                       color='secondary'
                       sx={{
                         width: '100%',
-                        fontSize: '20px',
+                        fontSize: '16px',
                         borderLeft: btnExpanded === button ? '3px green solid' : '',
                         textTransform: 'none',
-                        marginRight: '30px',
+                        textAlign: 'left',
                         color: btnExpanded === button ? '#4CAF50' : '#828796',
-                        backgroundColor: btnExpanded === accordion.id ? '#22A565' : '#050E2D'
+                        backgroundColor: btnExpanded === accordion.id ? '#22A565' : '#050E2D',
+                        borderRadius: '0px',
+                        justifyContent: 'start',
+                        paddingLeft: '20px',
                       }}
                       onClick={handleButtonClick}
                     >

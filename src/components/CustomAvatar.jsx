@@ -17,7 +17,6 @@ const CustomAvatar = ({ name }) => {
     .join('')
     .toUpperCase();
 
-
   const randomColor = () => {
     const index = initials.charCodeAt(0) - 65;
     return colors[index];

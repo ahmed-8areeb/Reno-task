@@ -13,8 +13,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Accordion, AccordionSummary, AccordionDetails, Button } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Navbar from './Navbar';
-import { NavLink } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Outlet, NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -69,7 +68,7 @@ const accordionData = [
   { id: 'licensemanagement', label: 'License Management' }
 ];
 
-export default function PersistentDrawerLeft({ children }) {
+export default function PersistentDrawerLeft() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState('');
   const [btnExpanded, setBtnExpanded] = useState('');
@@ -226,7 +225,7 @@ export default function PersistentDrawerLeft({ children }) {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        {children}
+        <Outlet />
       </Main>
     </Box >
   );

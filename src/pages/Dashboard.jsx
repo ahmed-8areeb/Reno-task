@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import AddUserModal from "../components/AddUserModal";
 import { useState, useReducer, useEffect } from 'react';
-import PersistentDrawerLeft from "../components/PersistentDrawerLeft";
 
 const initialState = {
   data: [],
@@ -65,23 +64,21 @@ function Dashboard() {
   }, []);
 
   return (
-    <PersistentDrawerLeft >
-      <Box sx={{ width: '100%' }}>
-        <AddUserModal isOpened={isOpen} handleClose={handleClose} fetchData={fetchData} />
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1>User Management</h1>
-          <Button onClick={() => setIsOpen(true)} variant="contained" sx={{
-            color: '#FFF',
+    <Box sx={{ width: '100%' }}>
+      <AddUserModal isOpened={isOpen} handleClose={handleClose} fetchData={fetchData} />
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h1>User Management</h1>
+        <Button onClick={() => setIsOpen(true)} variant="contained" sx={{
+          color: '#FFF',
+          backgroundColor: '#22A565',
+          '&:hover': {
             backgroundColor: '#22A565',
-            '&:hover': {
-              backgroundColor: '#22A565',
-              color: '#FFF',
-            },
-          }}>+ Add New</Button>
-        </Box>
-        <Table state={state} />
+            color: '#FFF',
+          },
+        }}>+ Add New</Button>
       </Box>
-    </PersistentDrawerLeft>
+      <Table state={state} />
+    </Box>
   )
 }
 

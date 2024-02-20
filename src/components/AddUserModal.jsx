@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Button,
   Modal,
@@ -57,8 +57,12 @@ const AddUserModal = ({ handleClose, isOpened, fetchData }) => {
     }
     finally {
       handleClose();
+      setGroup('');
+      setProfile('');
     }
   };
+
+
 
   return (
     <>
@@ -80,7 +84,11 @@ const AddUserModal = ({ handleClose, isOpened, fetchData }) => {
             borderRadius: '8px 8px 0 0',
           }}>
             <Typography variant="h6" style={{ marginRight: 'auto' }}>Add New User</Typography>
-            <IconButton onClick={handleClose} style={{ color: '#FFF' }}>
+            <IconButton onClick={() => {
+              handleClose();
+              setGroup('');
+              setProfile('');
+            }} style={{ color: '#FFF' }}>
               <CloseIcon />
             </IconButton>
           </div>
@@ -167,6 +175,8 @@ const AddUserModal = ({ handleClose, isOpened, fetchData }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   formRef.current.reset();
+                  setGroup('');
+                  setProfile('');
                   setErrorMessage('');
                 }}
                 sx={{
@@ -181,7 +191,11 @@ const AddUserModal = ({ handleClose, isOpened, fetchData }) => {
                 Reset Fields
               </Button>
               <div style={{ display: 'flex', gap: '8px' }}>
-                <Button onClick={handleClose} variant="contained" sx={{
+                <Button onClick={() => {
+                  handleClose();
+                  setGroup('');
+                  setProfile('');
+                }} variant="contained" sx={{
                   backgroundColor: "#FAFBFB", color: '#000',
                   '&:hover': {
                     backgroundColor: "#FAFBFB", color: '#000',

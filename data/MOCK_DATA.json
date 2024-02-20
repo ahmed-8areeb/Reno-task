@@ -944,6 +944,42 @@
       "group": "Office",
       "status": "Active",
       "createdOn": "2/20/2024"
+    },
+    {
+      "id": "7e56",
+      "name": "Ahmed",
+      "userName": "Ghareeb",
+      "email": "ahmed.mahmoud.elghareeb@gmail.com",
+      "group": "Managers",
+      "status": "Active",
+      "createdOn": "2/20/2024"
+    },
+    {
+      "id": "1788",
+      "name": "user123",
+      "userName": "user123",
+      "email": "user@gmail.com",
+      "group": "Managers",
+      "status": "Active",
+      "createdOn": "2/20/2024"
+    },
+    {
+      "id": "bf2f",
+      "name": "ahmed123",
+      "userName": "ahmed321",
+      "email": "ahmed123@gmail.com",
+      "group": "Managers",
+      "status": "Active",
+      "createdOn": "2/20/2024"
+    },
+    {
+      "id": "29c2",
+      "name": "reno123",
+      "userName": "reno123",
+      "email": "reno@gmail.com",
+      "group": "Office",
+      "status": "Active",
+      "createdOn": "2/20/2024"
     }
   ]
 }
